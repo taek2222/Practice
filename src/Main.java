@@ -7,6 +7,8 @@ public class Main {
             System.out.println("--------------- LOTTO 프로그램 ---------------");
             System.out.println("\t\t\t  [ 제 " + lottonumber + "회 로또 추첨 ]");
             System.out.println("\t\t\t  [ 제 " + lottonumber + "회 로또 추첨 ]");
+
+            break;
         }
     }
 }
