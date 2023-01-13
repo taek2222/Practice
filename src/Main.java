@@ -27,6 +27,7 @@ public class Main {
             age = sc.nextInt();
 
             switch (age){
+                case 1:
 
             }
             break;
