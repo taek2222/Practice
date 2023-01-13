@@ -28,7 +28,7 @@ public class Main {
 
             switch (age){
                 case 1:
-
+                case 2:
             }
             break;
         }
