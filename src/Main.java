@@ -1,13 +1,15 @@
 import money.Money;
-
 import java.text.DecimalFormat;
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
         Money doll = new Money();
         DecimalFormat df = new DecimalFormat("###,###"); // 숫자 천 단위 , 적용 클래스
+        Scanner sc = new Scanner(System.in);
 
         int lottonumber = 1;
+        int age;
         String Moneyprint;
 
         while (true) {
@@ -22,6 +24,11 @@ public class Main {
             System.out.println("② LOTTO 번호 뽑기 ( 자동 )");
             System.out.println("③ LOTTO 당첨 번호 확인");
             System.out.println("④ LOTTO 프로그램 안내");
+            age = sc.nextInt();
+
+            switch (age){
+
+            }
             break;
         }
     }
