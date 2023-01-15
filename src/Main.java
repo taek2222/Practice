@@ -1,6 +1,8 @@
 import java.util.Scanner;
 
 import static money.Money.*;
+
+import number.auto;
 import number.manual;
 
 public class Main {
@@ -19,13 +21,16 @@ public class Main {
             System.out.println("① LOTTO 번호 뽑기 ( 수동 )");
             System.out.println("② LOTTO 번호 뽑기 ( 자동 )");
             System.out.println("③ LOTTO 당첨 번호 확인");
-            System.out.println("④ LOTTO 프로그램 안내");
+            System.out.println("④ LOTTO 당첨 이력 조회");
+            System.out.println("⑤ LOTTO 프로그램 안내");
 
             switch (sc.nextInt()){
                 case 1:
-                    manual.manualstart();
+                    manual.Manualstart();
                     break;
                 case 2:
+                    auto.Autostart();
+                    break;
                 case 3:
                 case 4:
                 default:
