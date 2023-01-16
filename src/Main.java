@@ -9,12 +9,12 @@ public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        int lottonumber = 1;
+        int lottoturn = 1;
         int connection = 0;
 
         while (true) {
             System.out.println("--------------- LOTTO 프로그램 ---------------");
-            System.out.println("\t\t\t  [ 제 " + lottonumber + "회 로또 추첨 ]");
+            System.out.println("\t\t\t  [ 제 " + lottoturn + "회 로또 추첨 ]");
             moneyprint(); // 현재 금액 출력
             System.out.println("---------------------------------------------\n");
 
@@ -41,6 +41,8 @@ public class Main {
                     else auto.searchconnection();
                     continue;
                 case 4:
+                    auto.wincheck(lottoturn);
+                    continue;
                 default:
                     System.out.println("번호를 잘못 입력하였습니다. 다시 입력바랍니다.");
             }

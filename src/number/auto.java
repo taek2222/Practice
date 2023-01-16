@@ -1,6 +1,7 @@
 package number;
 
 import money.Money;
+import win.win;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -19,14 +20,14 @@ public class auto {
             Sheets = Sc.nextInt();
             System.out.println("구입할 장수가 " + Sheets + "장이 맞습니까? ex) ① 예 / ② 아니오");
             if(Sc.nextInt() == 1)
-                if(Money.money < 5000 * Sheets) {
+                if(Money.money < 1 * Sheets) {
                     System.out.println("현재 잔고의 금액이 부족합니다. 수량을 다시 입력해주세요. [ 안내 : 1장당 5,000원 ]");
                     continue;
                 }
             break;
         }
 
-        Money.money -= 5000*Sheets;
+        Money.money -= 1*Sheets;
         number = new int[Sheets][7]; // 로또 번호 입력 2차원 배열 생성.
 
         for(int i = 0; i < Sheets; i++) {
@@ -41,7 +42,9 @@ public class auto {
         System.out.println(" 총 " + Sheets + "장의 로또가 성공적으로 구매되었습니다. \n");
     }
 
-    public static void searchconnection(){
-        search.numberserch(number, 1);
+    public static void searchconnection(){ search.numberserch(number, 1); }
+    public static void wincheck(int lottoturn){
+        win.winnumberprint(lottoturn);
+        win.winnumbercheck(number, Sheets);
     }
 }
