@@ -1,9 +1,10 @@
 import java.util.Scanner;
 
-import static money.Money.*;
-
 import number.auto;
 import number.manual;
+import win.windata;
+
+import static money.Money.moneyprint;
 
 public class Main {
     public static void main(String[] args) {
@@ -42,6 +43,9 @@ public class Main {
                     continue;
                 case 4:
                     auto.wincheck(lottoturn);
+                    continue;
+                case 5:
+                    windata.printnumber();
                     continue;
                 default:
                     System.out.println("번호를 잘못 입력하였습니다. 다시 입력바랍니다.");
