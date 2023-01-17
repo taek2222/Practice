@@ -1,14 +1,16 @@
 package win;
 
 import money.Money;
+
+import java.util.ArrayList;
 import java.util.Random;
 
 public class win {
     static Random Rd = new Random();
-    static int[][] winlist = new int[2][7];
     static int listnumber = 0; // 한 회차에 몇번 당첨 횟수
     static int[] check = new int[7]; // 당첨 번호
     static int[] usercheck = new int[7]; // 로또 번호
+    static ArrayList<Integer>[] winlist = new ArrayList[20];
     public static void winnumberprint(int lottoturn) {
         System.out.println("\t\t\t  [ 제" + lottoturn + "회 로또 당첨 번호 ]");
         check[0] = Rd.nextInt(45) + 1;
@@ -19,6 +21,7 @@ public class win {
         }
         check[6] = Rd.nextInt(45)+1;
         System.out.print(" * 보너스 번호 : ["+ check[6] + "] \n");
+        win.ArrayListreset();
         win.wininput(check);
     }
 
@@ -38,7 +41,7 @@ public class win {
                 bonus++;
             winpay(count, bonus);
         }
-        windata.savenumber(winlist);
+        windata.savenumber(winlist, listnumber+1);
     }
 
     public static void winpay(int count, int bonus) {
@@ -74,7 +77,7 @@ public class win {
                 listnumber++;
                 win.wininput(usercheck);
                 break;
-            case 3:
+            case 1:
                 System.out.println("* 5등 상품 지급 : 5,000");
                 Money.money += 5000;
                 listnumber++;
@@ -84,6 +87,11 @@ public class win {
     }
     public static void wininput(int[] number) {
         for(int i = 0; i < number.length; i++)
-            winlist[listnumber][i] = number[i];
+            winlist[listnumber].add(number[i]);
+    }
+
+    public static void ArrayListreset() {
+        for(int i = 0; i < 20; i++)
+            winlist[i] = new ArrayList<>();
     }
 }
