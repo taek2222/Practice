@@ -4,14 +4,13 @@ import java.util.ArrayList;
 
 public class windata {
     public static userwinnumber[] number = new userwinnumber[10];
-    public static class userwinnumber {
-        public static int[] usernumber = new int[7];
-
-        public static void setuserwinnumber(int number, int j) {
+    public class userwinnumber {
+            public int[] usernumber = { };
+        public void setuserwinnumber(int number, int j) {
             usernumber[j] = number;
         }
 
-        public static void numberprint() {
+        public void numberprint() {
             for(int i = 0; i < usernumber.length; i++)
                 System.out.print("[" + usernumber[i] + "] ");
             System.out.println();
@@ -21,7 +20,7 @@ public class windata {
     public static void savenumber(ArrayList<Integer>[] list, int length) {
         for(int i = 0; i < length; i++) {
             for (int j = 0; j < list[i].size(); j++) {
-                number[i].setuserwinnumber(list[i].get(j), j);
+               number[i].setuserwinnumber(list[i].get(j), j);
             }
         }
     }
@@ -33,8 +32,6 @@ public class windata {
         number[1].numberprint();
         number[2].numberprint();
 
-
         System.out.println();
     }
-
 }
