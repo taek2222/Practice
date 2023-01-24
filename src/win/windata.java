@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class windata {
     public static userwinnumber[] number = new userwinnumber[10];
-    public class userwinnumber {
+    public static class userwinnumber {
             public int[] usernumber = { };
         public void setuserwinnumber(int number, int j) {
             usernumber[j] = number;
