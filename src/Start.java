@@ -34,7 +34,7 @@ public class Start {
             System.out.println("\t ③ LOTTO 구매한 번호 조회");
             System.out.println("\t ④ LOTTO 당첨 번호 확인");
             System.out.println("\t ⑤ LOTTO 당첨 이력 조회");
-            System.out.println("\t ⑥ LOTTO 프로그램 안내");
+            System.out.println("\t ⑥ 다음 회차 진행");
 
             switch (sc.nextInt()){
                 case 1:
@@ -66,10 +66,12 @@ public class Start {
         }
     }
     public void winnumberprint(ArrayList<Integer> winnumbersave, int lottoturnnumber) {
-        System.out.println("제 [" + lottoturnnumber +"]회 로또 당첨 조회 결과");
+        System.out.println("----------- 제 [" + lottoturnnumber +"]회 로또 당첨 조회 결과 -----------");
         for (int i = 0; i < winnumbersave.size(); i++) {
-            if (i % 7 == 0)
-                System.out.println();
+            if ((i+1) % 7 == 0){
+                System.out.println(" * 보너스 번호 : " + winnumbersave.get(i));
+                continue;
+            }
             System.out.print("[" + winnumbersave.get(i) + "] ");
         }
     }
