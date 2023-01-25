@@ -53,19 +53,24 @@ public class Start {
                 case 4:
                     winnumber = win.winnumberprint(lottoturnnumber);
                     winnumbersave = win.winnumbercheck(number, winnumber);
-                    for(int i = 0; i < winnumbersave.size(); i++) {
-                        if(i % 7 == 0)
-                            System.out.println();
-                        System.out.print("[" + winnumbersave.get(i) + "] ");
-                    }
                     continue;
                 case 5:
-                    //windata.printnumber();
+                    winnumberprint(winnumbersave, lottoturnnumber);
                     continue;
+                case 6:
+                    break;
                 default:
                     System.out.println("번호를 잘못 입력하였습니다. 다시 입력바랍니다.");
             }
             break;
+        }
+    }
+    public void winnumberprint(ArrayList<Integer> winnumbersave, int lottoturnnumber) {
+        System.out.println("제 [" + lottoturnnumber +"]회 로또 당첨 조회 결과");
+        for (int i = 0; i < winnumbersave.size(); i++) {
+            if (i % 7 == 0)
+                System.out.println();
+            System.out.print("[" + winnumbersave.get(i) + "] ");
         }
     }
 }

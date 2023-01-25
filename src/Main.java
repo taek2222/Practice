@@ -6,7 +6,7 @@ public class Main {
         while (true) {
             lottoturn[lottoturnnumber] = new Start();
             lottoturn[lottoturnnumber].lottostart(lottoturnnumber+1);
-            break;
+            lottoturnnumber++;
         }
     }
 
