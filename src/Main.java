@@ -19,7 +19,7 @@ public class Main {
                     continue;
                 case 2:
                     for(int i = 0; i < lottoturnnumber; i++)
-                        lottoturn[i].winnumberprint(lottoturn[i].winnumbersave, i+1);
+                        lottoturn[i].winnumberprint(i+1);
                     continue;
                 case 3:
                     //

@@ -55,7 +55,7 @@ public class Start {
                     winnumbersave = win.winnumbercheck(number, winnumber);
                     continue;
                 case 5:
-                    winnumberprint(winnumbersave, lottoturnnumber);
+                    winnumberprint(lottoturnnumber);
                     continue;
                 case 6:
                     break;
@@ -65,8 +65,11 @@ public class Start {
             break;
         }
     }
-    public void winnumberprint(ArrayList<Integer> winnumbersave, int lottoturnnumber) {
+    public void winnumberprint(int lottoturnnumber) {
         System.out.println("----------- 제 [" + lottoturnnumber +"]회 로또 당첨 조회 결과 -----------");
+        System.out.print(lottoturnnumber + "회 당첨번호 : ");
+        for (int j : winnumber) System.out.print("[" + j + "] ");
+        System.out.println();
         for (int i = 0; i < winnumbersave.size(); i++) {
             if ((i+1) % 7 == 0){
                 System.out.println(" * 보너스 번호 : " + winnumbersave.get(i));
