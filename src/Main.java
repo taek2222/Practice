@@ -9,7 +9,7 @@ public class Main {
             System.out.println("\n--------------- LOTTO 메인 프로그램 ---------------");
             System.out.println("① 제 [" + (lottoturnnumber+1) + "]회 로또 복권 구매 / 당첨 시작");
             System.out.println("② 모든 회차 당첨 번호 확인");
-            System.out.println("③ 로또 프로그램 안내");
+            System.out.println("③ 프로그램 종료 ");
 
             switch (sc.nextInt()) {
                 case 1:
@@ -22,7 +22,11 @@ public class Main {
                         lottoturn[i].winnumberprint(i+1);
                     continue;
                 case 3:
-                    //
+                    System.out.println("프로그램을 종료하겠습니다.");
+                    break;
+                default:
+                    System.out.println("번호를 잘못 선택하셨습니다. 다시 입려해주세요.");
+
             }
         }
     }
