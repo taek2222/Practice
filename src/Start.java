@@ -47,8 +47,8 @@ public class Start { // 회차 메인 화면
                     continue;
                 case 3:
                     if(autooption)
-                        search.numberserch(number, 1); // (자동) 리스트 출력 메소드 호출.
-                    else search.numberserch(number, 0); // (수동) 리스트 출력 메소드 호출.
+                        search.numbersearch(number, 1); // (자동) 리스트 출력 메소드 호출.
+                    else search.numbersearch(number, 0); // (수동) 리스트 출력 메소드 호출.
                     continue;
                 case 4:
                     winnumber = win.winnumberprint(lottoturnnumber); // 당첨 번호 출력 및 생성 메소드 호출.
