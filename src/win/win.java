@@ -46,7 +46,7 @@ public class win {
             System.out.print("* 보너스 번호 : [" + usercheck[6] + "] ");
             if(check[6] == usercheck[6])
                 bonus++;
-            if(count >= 1) {
+            if(count >= 3) {
                 for(int k = 0; k < 7; k++)
                     winnumbersave.add(usercheck[k]);
                 winpay(count, bonus);
@@ -82,7 +82,7 @@ public class win {
                 Money.money += 50000;
                 listnumber++;
                 break;
-            case 1:
+            case 3:
                 System.out.print("* 5등 상품 지급 : 5,000");
                 Money.money += 5000;
                 listnumber++;

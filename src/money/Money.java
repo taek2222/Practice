@@ -3,7 +3,7 @@ package money;
 import java.text.DecimalFormat;
 
 public class Money {
-    public static int money = 2000000;// 기본 소지금 $ 5,000원
+    public static int money = 20000000;// 기본 소지금 $ 20,000,000원
 
     public static void moneyprint() // 현재 금액 출력 객체
     {
